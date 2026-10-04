@@ -119,6 +119,9 @@ h1{margin:2px 0 0;font-family:var(--f-display);font-style:italic;font-weight:600
 @media (max-width:339px){.sys{grid-template-columns:repeat(2,minmax(0,1fr))}.bar.wide{grid-column:span 1}}
 @media (prefers-reduced-motion:no-preference){.bar{transition:background-color .12s}}
 .eyebrow a.home{color:inherit;text-decoration:underline;text-underline-offset:2px}.eyebrow a.home:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.legal{padding-top:18px;border-top:1px solid var(--rule);font-size:12px;line-height:1.55;color:var(--ink-3)}
+.legal p{margin:0 0 6px;max-width:62ch}
+.legal p:last-child{margin-bottom:0}
 </style>
 <div class="wrap">
 <header>
@@ -174,6 +177,7 @@ h1{margin:2px 0 0;font-family:var(--f-display);font-style:italic;font-weight:600
 <p>带 ? 的地方有三处：1:51 的过门小节，2:55 那一小节（低音没有出现），以及 5:02 起贝斯独奏的前 12 小节。独奏时贝斯不再弹根音，那一段的和弦是对照 A 段曲式和零星的和弦音推断的。</p>
 <p>根音和大小三度比较可靠，七音和延伸音不一定准，比如 Cmaj7 也可能只是 C。6:46 以后渐慢，结尾的时间只是大概。</p></div>
 </section>
+<footer class="legal"><p>伴奏来自商业录音，原曲版权归原权利人所有。伴奏和和弦谱仅供个人练习，禁止下载、转载、再分发、商用、公开演出或直播。</p><p lang="en">Backing tracks are derived from commercial recordings; all rights belong to their original owners. For personal practice only. Redistribution, commercial use and public performance are prohibited.</p></footer>
 </div>
 <div class="player" id="player"><div class="pl-in"><div class="now-row"><div class="now-ch" id="nowCh"></div><div class="next"><span class="k">下一个</span><span class="nc" id="nextCh"></span></div><div class="pos"><span class="pos-lab" id="posLab"></span><span class="dots" id="dots"><i></i><i></i><i></i><i></i></span></div></div><div class="ctl-row"><button type="button" class="play" id="play" aria-label="播放"><svg viewBox="0 0 24 24" aria-hidden="true"><path id="icon" d="M7 4.5v15l13-7.5z"/></svg></button><span class="tm" id="tCur">0:00</span><input type="range" id="seek" min="0" max="443" step="0.1" value="0" aria-label="播放位置"><span class="tm r" id="tDur">7:23</span></div><div class="opt-row"><div class="spd" role="group" aria-label="播放速度"><button type="button" data-rate="0.75" aria-pressed="false">0.75×</button><button type="button" data-rate="0.9" aria-pressed="false">0.9×</button><button type="button" data-rate="1" aria-pressed="true">1×</button></div><button type="button" class="opt" id="loop" aria-pressed="false">循环本段</button><span class="status" id="status"></span></div><div class="err" id="err" hidden><span>伴奏没有加载出来。可以从手机里选伴奏文件，谱子照样跟着走：</span><input type="file" id="pick" accept="audio/*"></div></div></div>
 <audio id="aud" src="backing.mp3" preload="metadata"></audio>

@@ -124,3 +124,7 @@
 | Em7 (3)A7 \| Dm7 (3)G7 \| G7 \| G7 | C♯m7 (3)F♯7 \| Bm7 (3)E7 \| E7 \| E7 |
 
 结束：6:57 G7（中音萨克斯 E7），自由延长，约 8 秒；7:05 C6/9(♯11)（中音萨克斯 A6/9(♯11)），结束和弦。
+
+---
+
+伴奏和和弦谱仅供个人练习，原曲版权归原权利人所有，禁止转载、再分发和商用。For personal practice only; all rights belong to the original owners. See [DISCLAIMER.md](../../DISCLAIMER.md).

@@ -119,3 +119,7 @@
 | Dmaj7 \| D7 \| Gmaj7 \| C7 | Bmaj7 \| B7 \| Emaj7 \| A7 |
 
 结束：6:15 Dmaj7（中音萨克斯 Bmaj7），渐慢延长，约 21 秒；6:36 N.C.，尾声，没有和弦。
+
+---
+
+伴奏和和弦谱仅供个人练习，原曲版权归原权利人所有，禁止转载、再分发和商用。For personal practice only; all rights belong to the original owners. See [DISCLAIMER.md](../../DISCLAIMER.md).

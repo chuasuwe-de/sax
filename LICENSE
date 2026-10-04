@@ -1,0 +1,41 @@
+本仓库的内容分两部分，适用不同的条款。
+This repository has two parts, each under different terms.
+
+1. 代码 / Code — MIT License
+   tools/ 目录下的全部文件（脚本和页面模板），以及由它们生成的页面框架代码。
+   Everything under tools/ (scripts and page templates), and the page
+   scaffolding generated from them.
+
+2. 曲目内容 / Song content — 不授权 / NOT licensed
+   songs/ 目录下的全部文件，包括伴奏音频（backing.mp3）、和弦谱
+   （song.json、chords.md）和由它们生成的页面。原曲的词、曲和录音版权
+   归原权利人所有，本仓库不授予任何许可。详见 DISCLAIMER.md。
+   Everything under songs/, including the backing audio (backing.mp3), the
+   chord charts (song.json, chords.md) and the pages generated from them.
+   The copyright in the original compositions and sound recordings belongs to
+   their respective owners. No license of any kind is granted for this
+   content. See DISCLAIMER.md.
+
+-------------------------------------------------------------------------------
+
+MIT License
+
+Copyright (c) 2026 chuasuwe-de
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.

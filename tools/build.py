@@ -12,6 +12,10 @@ TPL = os.path.join(ROOT, 'tools', 'template')
 OFF = {'alto': 9, 'concert': 0, 'tenor': 2}
 MODES = ('alto', 'concert', 'tenor')
 FONTS = '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600&family=Bodoni+Moda:ital,wght@1,600&display=swap">'
+NOTICE = ('<footer class="legal"><p>伴奏来自商业录音，原曲版权归原权利人所有。伴奏和和弦谱仅供个人练习，'
+          '禁止下载、转载、再分发、商用、公开演出或直播。</p>'
+          '<p lang="en">Backing tracks are derived from commercial recordings; all rights belong to their original owners. '
+          'For personal practice only. Redistribution, commercial use and public performance are prohibited.</p></footer>')
 HEAD = ('<!doctype html>\n<html lang="zh-CN">\n<head>\n<meta charset="utf-8">\n'
         '<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">\n'
         '<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}'
@@ -169,6 +173,7 @@ class Song:
 <section class="notes">
 {notes}
 </section>
+{NOTICE}
 </div>
 <div class="player" id="player"><div class="pl-in"><div class="now-row"><div class="now-ch" id="nowCh"></div><div class="next"><span class="k">下一个</span><span class="nc" id="nextCh"></span></div><div class="pos"><span class="pos-lab" id="posLab"></span><span class="dots" id="dots"><i></i><i></i><i></i><i></i></span></div></div><div class="ctl-row"><button type="button" class="play" id="play" aria-label="播放"><svg viewBox="0 0 24 24" aria-hidden="true"><path id="icon" d="M7 4.5v15l13-7.5z"/></svg></button><span class="tm" id="tCur">0:00</span><input type="range" id="seek" min="0" max="{int(dur)}" step="0.1" value="0" aria-label="播放位置"><span class="tm r" id="tDur">{mmss(dur)}</span></div><div class="opt-row"><div class="spd" role="group" aria-label="播放速度"><button type="button" data-rate="0.75" aria-pressed="false">0.75×</button><button type="button" data-rate="0.9" aria-pressed="false">0.9×</button><button type="button" data-rate="1" aria-pressed="true">1×</button></div><button type="button" class="opt" id="loop" aria-pressed="false">循环本段</button><span class="status" id="status"></span></div><div class="err" id="err" hidden><span>伴奏没有加载出来。可以从手机里选伴奏文件，谱子照样跟着走：</span><input type="file" id="pick" accept="audio/*"></div></div></div>
 <audio id="aud" src="{d["audio"]}" preload="metadata"></audio>
@@ -205,6 +210,7 @@ class Song:
                 name = f'{self.text(ch, "concert")}（中音萨克斯 {self.text(ch, "alto")}）' if ch else 'N.C.'
                 parts.append(f'{mmss(c["t"])} {name}，{c.get("caption") or c["lab"]}')
             L += [f'{sec["title"]}：' + '；'.join(parts) + '。', '']
+        L += ['---', '', '伴奏和和弦谱仅供个人练习，原曲版权归原权利人所有，禁止转载、再分发和商用。For personal practice only; all rights belong to the original owners. See [DISCLAIMER.md](../../DISCLAIMER.md).', '']
         return '\n'.join(L)
 
 
@@ -234,7 +240,7 @@ def build_home(songs):
     page = (HEAD + '<title>萨克斯自练</title>\n' + FONTS + f'\n<style>{css}{extra}</style>\n</head>\n<body>\n'
             '<div class="wrap" style="padding-bottom:48px">\n<header><p class="eyebrow">自练存档 · 不对外分享</p><h1>萨克斯自练</h1>'
             '<p class="meta">每首歌一页：带伴奏播放的和弦谱，可以在中音萨克斯调、实际音高和次中音萨克斯调之间切换。</p></header>\n'
-            f'<nav class="songs" aria-label="曲目">{rows}</nav>\n</div>\n</body>\n</html>\n')
+            f'<nav class="songs" aria-label="曲目">{rows}</nav>\n{NOTICE}\n</div>\n</body>\n</html>\n')
     open(os.path.join(ROOT, 'index.html'), 'w').write(page)
     # README 曲目表
     rp = os.path.join(ROOT, 'README.md')

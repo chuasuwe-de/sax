@@ -46,4 +46,10 @@ tools/
 
 和弦是从伴奏音频用 AI 模型识别、再交叉核对出来的。根音和大小三度比较可靠，七音和延伸音不一定准。
 
-伴奏来自商业录音，只用于个人练习。这个仓库请保持私有。
+## 版权声明 / Copyright
+
+伴奏来自商业录音，原曲版权归原权利人所有。伴奏和和弦谱**仅供个人练习**，禁止下载、转载、再分发、商用、公开演出或直播、上传到其他平台，以及用于训练 AI 模型。
+
+The backing tracks are derived from commercial recordings; all rights belong to their original owners. The backing tracks and chord charts are **for personal practice only**. Redistribution, commercial use, public performance or streaming, re-uploading and AI training are prohibited.
+
+完整声明见 [DISCLAIMER.md](DISCLAIMER.md)。`tools/` 里的代码按 MIT 许可证开放，`songs/` 里的内容不授权，见 [LICENSE](LICENSE)。
