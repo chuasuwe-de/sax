@@ -1,0 +1,6 @@
+# 分析中间文件（wav、模型输出），可以随时用 tools/analyze.py 重新生成
+songs/*/work/
+tools/.cache/
+.venv*/
+__pycache__/
+.DS_Store
